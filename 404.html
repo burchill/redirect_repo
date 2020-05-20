@@ -2,7 +2,9 @@
   <head>
     <meta http-equiv="refresh" content="0;URL='http://yahoo.com/'">
     <script type="text/javascript">
-      window.location.href='http://google.com/';
+      var current_url = window.location.href;
+      var encodedURL= "http://192.168.1.222:5000/scale_redir?ogurl=" + encodeURIComponent(current_url);
+      window.location.href=encodedURL;
     </script>
   </head>
   <body>
