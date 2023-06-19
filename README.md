@@ -15,7 +15,7 @@ Now my registrar's record table looks like this:
 | WWW | CNAME | 14440 | burchill.github.io |
 | SCALE | CNAME | 3600 | burchill.github.io |
 
-Then I added the `CNAME` file to this directory and included the `index.html` file that automatically redirects the browswer to the local site.  
+Then I added the `CNAME` file to this directory and included the `index.html` file that automatically redirects the browser to the local site.  
 
 This worked well, but I realized I couldn't do something like `http://scale.zachburchill.ml/weight_tracker/` and have it redirect to `http://<local_ip>/weight_tracker/` since the `weight_tracker` page doesn't exist as a page in this public repo.  I came up with a clever (in my opinion) workaround: since non-existent page requests are (generally) redirected to the `/404.html/` page, I could make a 404 page that would get the URL the user was *attempting* to visit and redirect them to that page on the local site (via Javascript). 
 
